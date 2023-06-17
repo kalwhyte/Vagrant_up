@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if vagrant status | grep -q "running"; then
+    echo "Vagrant is already up and running."
+else
+    echo "Starting vagrant..."
+    vagrant up
+fi
+
+vagrant ssh
